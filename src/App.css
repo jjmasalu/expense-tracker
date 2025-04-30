@@ -1,0 +1,35 @@
+/* --- body ----*/
+
+body {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    height: 100vh;
+    width: 100%;
+}
+
+
+
+.header {
+    
+    font-weight: 600;
+}
+
+
+
+
+.balance {
+    align-items: left;
+    font-weight: 600;
+    color: gray;
+    margin-left: 0px;
+    padding: 2px;
+}
+
+.balance #balance-header {
+    margin: 0px;
+}
+
+#balance-amount {
+    margin: 0px;
+}

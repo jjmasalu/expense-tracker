@@ -1,70 +1,69 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+Here's the updated README:
 
-In the project directory, you can run:
 
-### `npm start`
+**Expense Tracker**
+====================
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+A simple web application to track your expenses and income.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+**Live Demo**
+-------------
 
-### `npm test`
+You can view the live demo of the application at: [https://jjmasalu.github.io/expense-tracker/](https://jjmasalu.github.io/expense-tracker/)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+**Getting Started**
+-------------------
 
-### `npm run build`
+This project was bootstrapped with Create React App. To get started, follow these steps:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+1. Clone the repository: `git clone https://github.com/your-username/expense-tracker.git`
+2. Install dependencies: `npm install`
+3. Start the application: `npm start`
+4. Open your browser and navigate to `http://localhost:3000`
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+**Features**
+------------
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+* Add new transactions with details and amount
+* View your balance and transaction history
+* Delete transactions
+* Filter transactions by income and expenses
 
-### `npm run eject`
+**Components**
+--------------
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+* `AddTransaction`: A form to add new transactions
+* `Balance`: Displays the current balance
+* `IncomeExpenses`: Displays the total income and expenses
+* `SubsectionHeader`: A header component for subsections
+* `TransactionList`: A list of all transactions
+* `Transaction`: A single transaction component
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+**Context**
+------------
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+The application uses a global context to manage state. The context is defined in `src/context/GlobalState.jsx` and provides the following actions:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+* `addTransaction`: Adds a new transaction to the state
+* `deleteTransaction`: Deletes a transaction from the state
 
-## Learn More
+**Reducer**
+------------
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+The application uses a reducer to manage state changes. The reducer is defined in `src/context/AppReducer.jsx` and handles the following actions:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+* `ADD_TRANSACTION`: Adds a new transaction to the state
+* `DELETE_TRANSACTION`: Deletes a transaction from the state
 
-### Code Splitting
+**Styles**
+------------
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+The application uses CSS to style components. The styles are defined in `src/App.css`.
 
-### Analyzing the Bundle Size
+**Deployment**
+--------------
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+To deploy the application, run `npm run build` and then `npm run deploy`. This will build the application and deploy it to the `gh-pages` branch.
 
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)

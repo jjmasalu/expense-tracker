@@ -1,19 +1,22 @@
-import React, { useState } from 'react'
+import React, { useContext } from 'react'
+import { GlobalContext } from '../context/GlobalState';
 
 
-const Balance = (props) => {
-    const [balance, setBalance] = useState(0.00);
 
-    function calculateBalance(balanceChange) {
-        setBalance(prevBalance => {
-            return prevBalance + balanceChange;
-        })
-    }
+const Balance = () => {
+    const {transactions} = useContext(GlobalContext);
+    
+    const amounts = transactions.map(t => t.amount);
+    console.log(amounts)
+    const balance = amounts.reduce((total, acc) => total+acc, 0);
+
+    const sign = balance < 0 ? "-$" : "+$";
+
 
     return (
         <div className="balance">
             <h4 id='balance-header'>Your Balance:</h4>
-            <h1 id='balance-amount'>${balance}</h1>
+            <h2 id='balance-amount'>{sign}{Math.abs(balance)}</h2>
         </div>
       )
 }

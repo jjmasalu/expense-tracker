@@ -1,22 +1,37 @@
+:root {
+    --box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
 /* --- body ----*/
 
 body {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
     height: 100vh;
     width: 100%;
 }
 
 
-
 .header {
-    
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
     font-weight: 600;
 }
 
 
+.body-container {
+    display: block;
+    width: 40%;
+    margin-left: 30%;
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 55;
+}
 
+/*--- Balance ---*/
 
 .balance {
     align-items: left;
@@ -33,3 +48,144 @@ body {
 #balance-amount {
     margin: 0px;
 }
+
+
+/*--- Expense and Income ---*/
+
+.income-expenses-container {
+    display: grid;
+    grid-template-columns: 1fr 1px 1fr;
+    background-color: E7F0F2;
+    border-radius: 2%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin-top: 2px;
+
+}
+
+
+.income-expenses-container > div > * {
+   text-align: center;
+    align-self: center;
+    padding: 1px;
+}
+
+.income-expenses-container > div > h4 {
+    margin-bottom: 0px;
+    font-size: large;
+}
+
+.income-expenses-container > div > p {
+    margin-top: 0px;
+    margin-bottom: 25px;
+    font-size: xx-large;
+}
+
+.income-expenses-container .income p {
+    color: green;
+}
+
+.income-expenses-container .expenses p {
+    color: red;
+}
+
+.divider {
+    background-color: lightgray;
+    height: 70%;
+    align-self: center;
+}
+
+
+/*---Subsection header ---*/
+
+.subsection-header {
+    border-radius: 2%;
+    box-shadow: var(--box-shadow)     /*0 4px 5px rgba(0, 0, 0, 0.2); */
+}
+
+
+/*--- Transaction List ---*/
+
+.list {
+    list-style-type: none;
+    padding: 0;
+    margin-bottom: 40px;
+  }
+
+  .list li {
+    background-color: #fff;
+    box-shadow: var(--box-shadow);
+    color: #333;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    padding: 10px;
+    margin: 10px 0;
+  }
+
+  .list li.plus {
+    border-right: 5px solid #2ecc71;
+  }
+  
+  .list li.minus {
+    border-right: 5px solid #c0392b;
+  }
+
+.delete-btn {
+    cursor: pointer;
+    background-color: #e74c3c;
+    border: 0;
+    color: #fff;
+    font-size: 20px;
+    line-height: 20px;
+    padding: 2px 5px;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translate(-100%, -50%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+
+  .list li:hover .delete-btn {
+    opacity: 1;
+  }
+
+
+  /*--- Add Transaction ---*/
+
+  label {
+    display: inline-block;
+    margin: 10px 0;
+  }
+  
+  input[type='text'],
+  input[type='number'] {
+    border: 1px solid #dedede;
+    border-radius: 2px;
+    display: block;
+    font-size: 16px;
+    padding: 10px;
+    width: 100%;
+  }
+
+  .btn {
+    cursor: pointer;
+    background-color: #9c88ff;
+    box-shadow: var(--box-shadow);
+    color: #fff;
+    border: 0;
+    display: block;
+    font-size: 16px;
+    margin: 10px 0 30px;
+    padding: 10px;
+    width: 100%;
+  }
+
+  
+  
+  .btn:focus,
+  .delete-btn:focus {
+    outline: 0;
+  }
+
+  

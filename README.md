@@ -1,8 +1,5 @@
 
 
-Here's the updated README:
-
-
 **Expense Tracker**
 ====================
 
